@@ -51,6 +51,12 @@
 				c-1.042,4.939-4.968,6.222-8.725,2.851L117.203,37.792z"/>
 		</g>
 		<circle cx="291.868" cy="95.432" r="7.649"/>
+				<animateTransform attributeName="transform"         
+			type="rotate"
+            values="0 274 139;-5 274 139;0 274 139;0 274 139;0 274 139;0 274 139;0 274 139"
+ 			dur="3s" 
+ 			repeatCount="indefinite"
+ 				/>
 	</g>
 </g>
 <g>

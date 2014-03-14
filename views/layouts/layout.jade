@@ -4,15 +4,21 @@ html
     title Dominic Barker [Software Engineer]
     meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=no")
     link(rel="stylesheet", href="//f.fontdeck.com/s/css/JH8WV/TLmDja/gpz7inMvAqeHnU/localhost/43640.css", type="text/css")
-    link(rel="stylesheet", href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css")
     link(rel="stylesheet", href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css")
     link(rel="stylesheet", href="/public/stylesheets/style.css")
     link(rel="shortcut icon", href="/public/images/favicon.ico")
+    script.
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-49017800-1', 'dombarker.co.uk');
+        ga('send', 'pageview');
     block head
   body
-    div(class="container")
+    div(class="container container-fluid")
       div(class="row")
-        #side(class="col-md-3 col-sm-2")
+        #side
           block side
-        #content(class="col-md-9 col-sm-10")      
+        #content
           block content
