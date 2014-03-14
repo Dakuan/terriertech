@@ -1,0 +1,21 @@
+doctype html5
+html
+  head
+    title= title
+    meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=no")
+    link(rel="stylesheet", href="//f.fontdeck.com/s/css/JH8WV/TLmDja/gpz7inMvAqeHnU/localhost/43640.css", type="text/css")
+    link(rel="stylesheet", href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css")
+    link(rel="stylesheet", href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css")
+    link(rel="stylesheet", href="/public/stylesheets/style.css")
+    
+    script(type="text/javascript", src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js")
+    script(type="text/javascript", src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js")
+
+    block head
+  body
+    div(class="container")
+      div(class="row")
+        #side(class="col-md-3 col-sm-2")
+          block side
+        #content(class="col-md-9 col-sm-10")      
+          block content

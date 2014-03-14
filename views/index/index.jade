@@ -1,0 +1,39 @@
+extends ../layouts/layout
+block head
+block side
+	object(data="public/logo.svg",width="80px",class="logo")
+block content 
+	h1 Dominic Barker
+	h2 Software Engineer
+	hr
+	div(class="about section")
+		h3 About
+		p I am an engineer with over 10 years experience of solving challenging technical problems.	My main focus is full stack web and mobile development. I'm a passionate supporter of truly agile processes and regard Test Driven Development as being the only way to create professional grade software.
+		p I prefer to use the right tool to solve the task in hard, rather than specialising in any particular technology. I am especially enthusiastic about open source, rapid development toolsets like <a href="http://rubyonrails.org/">Ruby on Rails</a> and <a href="http://nodejs.org/">Node.js</a>.
+	div(class="tech section")
+		h3 Tech
+		ul(class="row icons")
+			li(class="col-md-3 col-sm-6")
+				object(data="public/node.svg",width="80px")
+			li(class="col-md-3 col-sm-6") 
+				object(data="public/ruby.svg",width="80px")
+			li(class="col-md-3 col-sm-6") 
+				i(class="fa fa-html5")
+			li(class="col-md-3 col-sm-6") 
+				i(class="fa fa-css3")
+	div(class="contact section")
+		h3 Contact
+		ul(class="row icons")
+			li(class="col-md-3 col-sm-6")
+				a(href="https://github.com/Dakuan")
+					i(class="fa fa-github")
+			li(class="col-md-3 col-sm-6")
+				a(href="http://uk.linkedin.com/in/dombarker")
+					i(class="fa fa-linkedin")
+			li(class="col-md-3 col-sm-6")
+				a(href="mailto:dom.barker808@gmail.com")
+					i(class="fa fa-envelope")
+			li(class="col-md-3 col-sm-6")
+				a(href="https://twitter.com/MostlyHarmlessD")
+					i(class="fa fa-twitter")
+	
