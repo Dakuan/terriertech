@@ -53,7 +53,7 @@
 		<circle cx="291.868" cy="95.432" r="7.649"/>
 				<animateTransform attributeName="transform"         
 			type="rotate"
-            values="0 274 139;-5 274 139;0 274 139;0 274 139;0 274 139;0 274 139;0 274 139"
+            values="0 274 139;-5 274 139;0 274 139"
  			dur="3s" 
  			repeatCount="indefinite"
  				/>
