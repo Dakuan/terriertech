@@ -8,6 +8,12 @@ body {
 .serif {
 	font-family:"Egyptienne URW Light", Cambria, Georgia, serif; font-size-adjust:0.471; font-weight:200; font-style:normal;
 }
+h1, h2, h3 {
+	text-align: left;
+	@media (max-width: @screen-sm-min) { 
+		text-align: center;
+	}
+}
 h1 { 
 	.serif();
 	font-size: 4em;		
