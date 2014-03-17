@@ -20,8 +20,7 @@ html
           }
           $('.tech').find('li').each(bindAnimation);
           $('.contact').find('li').each(bindAnimation);
-
-        });   
+      });   
     script.
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -31,6 +30,6 @@ html
         ga('send', 'pageview');
     block head
   body
-    div(class="container container-fluid")
+    div(class="container container-fluid", itemscope, itemtype="http://data-vocabulary.org/Person")
       #content
         block content

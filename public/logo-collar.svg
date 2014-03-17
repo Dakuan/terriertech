@@ -64,9 +64,9 @@
 					attributeName="transform" 
 					type="rotate" 
 					values="0 131 24;
-							7 131 24;
+							22 131 24;
 							0 131 24" 
-					dur="2s" 
+					dur="3s" 
 					repeatCount="indefinite" />
 		</g>
 		<circle stroke="#211D0E" stroke-miterlimit="10" cx="285.848" cy="82.374" r="7.649"/>
