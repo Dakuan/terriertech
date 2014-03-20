@@ -11,6 +11,7 @@
   "dependencies": {
     "express": "~3.4.8",
     "jade": "~1.3.0",
-    "less-middleware": "~0.2.1-beta"
+    "less-middleware": "~0.2.1-beta",
+    "express-uglify-middleware": "~1.0.2"
   }
 }

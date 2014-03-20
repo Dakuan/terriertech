@@ -1,0 +1,26 @@
+.portholes {
+	.make-row();
+	list-style: none;
+	margin-top: 3em;
+	padding: 0;
+	li {
+		.make-sm-column(6);
+		.make-md-column(3);
+		text-align: center;
+		min-height: 120px;
+		opacity: 0;
+		.icon {
+			@size: 150px;
+			border-color: #F8F8F8;
+			border-style: solid;
+			padding-top: 2em;
+			border-radius: @size;
+			height: @size;
+			width: @size;
+			margin-bottom: 3em;
+			box-shadow: 2px 2px 3px rgba(119, 119, 119, 0.2);
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}
