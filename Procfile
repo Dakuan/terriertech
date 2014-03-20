@@ -1,1 +1,1 @@
-web: node bootsrapper.js
+web: node bootstrapper.js
