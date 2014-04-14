@@ -1,2 +1,4 @@
 server/public/stylesheets/*
 server/public/javascripts/*
+newrelic_agent.log
+.idea/
