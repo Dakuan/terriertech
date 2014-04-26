@@ -11,3 +11,4 @@ built with
 * [jade](http://jade-lang.com/)
 * [express](http://www.expressjs.com)
 * [heroku](http://www.heroku.com)
+* [travis](https://travis-ci.org)
