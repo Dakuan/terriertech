@@ -26,6 +26,7 @@ module.exports = function () {
         }
     }));
     app.use("/public", express.static(__dirname + "/public"));
+    app.use("/public/components", express.static(path.join(__dirname, "../components")));
     app.disable('x-powered-by');
     app.get('/', function (req, res) {
         res.render('index/index', {
