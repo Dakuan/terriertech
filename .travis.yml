@@ -2,7 +2,6 @@ language: node_js
 node_js:
 - '0.11'
 deploy:
-  strategy: git
   provider: heroku
   app:
     master:
