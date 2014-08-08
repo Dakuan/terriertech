@@ -1,0 +1,35 @@
+section.open-source {
+	.panels {
+		.make-row();
+		margin-top: 3em;
+	}
+	.oss-panel {
+		.make-sm-column(6);
+		.panel {
+			display: block;
+			
+			.panel-default;
+			.panel-heading {
+				.serif();
+			}
+			.panel-body {
+				.description {
+					
+					.at-sm({
+						min-height: 8em;
+					});
+				}
+				.btn {
+					.center-block();
+					bottom: 0px;
+					margin-top: 0.4em;
+
+				}
+			}
+		}
+		font-size: 1.2em;
+	}
+	.contrib {
+		.make-sm-column(6);
+	}
+}

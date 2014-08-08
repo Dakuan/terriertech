@@ -1,3 +1,18 @@
+mixin oss-panel(name, link, description, icon)
+	div.oss-panel
+		div(class="panel panel-default")
+			div.panel-heading 
+				h4
+					span #{name}
+						a(href=link, target="_blank", class="pull-right")
+							i(class="fa fa-#{icon}")					
+			div.panel-body 
+				div.description #{description}
+
+				a(href=link, target="_blank" class="btn btn-primary btn-md") 
+					i(class="fa fa-github") &nbsp;					
+					span View on Github
+
 extends ../layouts/layout
 block head
 block content
@@ -17,6 +32,7 @@ block content
 				p <a href="http://www.openxo.com/" itemprop="organization" title="OpenXO">OpenXO</a> is my current employer and we are making wifi awesome. I'm very happy there and am not currently seeking projects elsewhere.
 			section(class="tech")
 				h3 Tech
+				p These of are some of the technologies that I have been using commercially in the recent past.
 				ul
 					li
 						div(class="icon")		
@@ -33,6 +49,7 @@ block content
 
 			section(class="contact")
 				h3 Contact
+				p If you want to get in touch, feel free to use one of these:
 				ul
 					li
 						div(class="icon")
@@ -50,3 +67,14 @@ block content
 						div(class="icon")
 							a(href="https://twitter.com/MostlyHarmlessD", title="Tweet me" rel="author")
 								i(class="fa fa-twitter")
+
+			section(class="open-source")
+				h3 Open Source
+				p I've authored and contributed to a few open source projects.
+				div.panels
+					mixin oss-panel("Jumanji", "http://github.com/Dakuan/jumanji", "Jumanji is an express middleware component that hacks around a Safari bug. It's not big and it's not clever but it's got users seeing pages again.", "code")
+					mixin oss-panel("Gulp-jest", "http://github.com/Dakuan/gulp-jest", "Gulp plugin that can run some or all of your Jest tests", "code")
+					mixin oss-panel("Jest", "http://github.com/facebook/jest", "Painless Javascript testing built on top of the Jasmine test framework, using familiar expect(value).toBe(other) assertions", "code-fork")
+					mixin oss-panel("Bootstrap", "http://github.com/twbs/bootstrap/", "Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development, created by Mark Otto and Jacob Thornton, and maintained by the core team with the massive support and involvement of the community.", "code-fork")
+				
+			
