@@ -6,11 +6,13 @@ section.open-source {
 	.oss-panel {
 		.make-sm-column(6);
 		.panel {
-			display: block;
-			
+			display: block;			
 			.panel-default;
 			.panel-heading {
 				.serif();
+				i {
+					color: @orange;
+				}
 			}
 			.panel-body {
 				.description {
@@ -18,12 +20,15 @@ section.open-source {
 					.at-sm({
 						min-height: 8em;
 					});
+
 				}
 				.btn {
-					.center-block();
+					.center-block();					
 					bottom: 0px;
 					margin-top: 0.4em;
-
+					.at-sm({
+						width: 50%;
+					});
 				}
 			}
 		}
