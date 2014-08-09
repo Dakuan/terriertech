@@ -1,15 +1,17 @@
-mixin oss-panel(name, link, description, icon)
+mixin oss-panel(name, link, description, relationship)
+	- var icon = (relationship === 'Author') ? 'fa-code' : 'fa-code-fork'
 	div.oss-panel
-		div(class="panel panel-default")
+		div(class="panel")
 			div.panel-heading 
 				h4
 					span #{name}
-						a(href=link, target="_blank", class="pull-right")
-							i(class="fa fa-#{icon}")					
+						a(href=link, target="_blank")
+							i(class="fa #{icon}") &nbsp;		
+							span #{relationship}					
 			div.panel-body 
 				div.description #{description}
-				a(href=link, target="_blank" class="btn btn-primary btn-md") 
-					i(class="fa fa-github") &nbsp;					
+				a(href=link, target="_blank" class="btn-github") 
+					i &nbsp;					
 					span View on Github
 
 extends ../layouts/layout
@@ -71,9 +73,9 @@ block content
 				h3 Open Source
 				p I've authored and contributed to a few open source projects.
 				div.panels
-					mixin oss-panel("Jumanji", "http://github.com/Dakuan/jumanji", "Jumanji is an express middleware component that hacks around a Safari bug. It's not big and it's not clever but it's got users seeing pages again.", "code")
-					mixin oss-panel("Gulp-jest", "http://github.com/Dakuan/gulp-jest", "Gulp plugin that can run some or all of your Jest tests", "code")
-					mixin oss-panel("Jest", "http://github.com/facebook/jest", "Painless Javascript testing built on top of the Jasmine test framework, using familiar expect(value).toBe(other) assertions", "code-fork")
-					mixin oss-panel("Bootstrap", "http://github.com/twbs/bootstrap/", "Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development, created by Mark Otto and Jacob Thornton, and maintained by the core team with the massive support and involvement of the community.", "code-fork")
+					mixin oss-panel("Jumanji", "http://github.com/Dakuan/jumanji", "Jumanji is an express middleware component that hacks around a Safari bug. It's not big and it's not clever but it's got users seeing pages again.", "Author")
+					mixin oss-panel("Gulp-jest", "http://github.com/Dakuan/gulp-jest", "Gulp plugin that can run some or all of your Jest tests", "Author")
+					mixin oss-panel("Jest", "http://github.com/facebook/jest", "Painless Javascript testing built on top of the Jasmine test framework, using familiar expect(value).toBe(other) assertions", "Contributor")
+					mixin oss-panel("Bootstrap", "http://github.com/twbs/bootstrap/", "Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development, created by Mark Otto and Jacob Thornton, and maintained by the core team with the massive support and involvement of the community.", "Contributor")
 				
 			

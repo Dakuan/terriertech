@@ -10,6 +10,11 @@ section.open-source {
 			.panel-default;
 			.panel-heading {
 				.serif();
+				h4 {
+					a {
+						.pull-right();
+					}
+				}
 				i {
 					color: @orange;
 				}
@@ -20,15 +25,21 @@ section.open-source {
 					.at-sm({
 						min-height: 8em;
 					});
-
 				}
-				.btn {
+				.btn-github {
+					&:extend(.btn);
+					&:extend(.btn-primary);
+					&:extend(.btn-md);
 					.center-block();					
 					bottom: 0px;
 					margin-top: 0.4em;
 					.at-sm({
 						width: 50%;
 					});
+					i {
+						&:extend(.fa);
+						&:extend(.fa-github);
+					}
 				}
 			}
 		}
