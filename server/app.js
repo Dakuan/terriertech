@@ -2,6 +2,7 @@ module.exports = function () {
     var express = require('express'),
         uglifyMiddleware = require('express-uglify-middleware'),
         lessMiddleware = require('less-middleware'),
+        compress = require('compression'),
         path = require('path'),
         app = express();
 
@@ -16,6 +17,10 @@ module.exports = function () {
         compress: true,
         force: false,
     }));
+
+
+    // Zip the things
+    app.use(compress());
 
     app.use(lessMiddleware(path.join('', __dirname, '../stylesheets'), {
         dest: __dirname,
