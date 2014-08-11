@@ -5,10 +5,18 @@ html
     meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=no")
     meta(name="description", content="Ruby on Rails and Node.js development in Hertfordshire")
     meta(name="keywords", content="node,node.js,ruby,ruby on rails,hitchin,hertfordshire,software,sofware engineering,sofware development")
-    link(rel="shortcut icon", href="/public/images/favicon.ico") 
-    link(rel="stylesheet", href="//f.fontdeck.com/s/css/JH8WV/TLmDja/gpz7inMvAqeHnU/#{host}/43640.css", type="text/css")
-    link(rel="stylesheet", href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css")
-    link(rel="stylesheet", href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.0.0/animate.min.css")
+    link(rel="shortcut icon", href="/public/images/favicon.ico")
+    script.
+        WebFontConfig = { fontdeck: { id: '43640' } };
+        (function() {
+          var wf = document.createElement('script');
+          wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+          '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+          wf.type = 'text/javascript';
+          wf.async = 'true';
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(wf, s);
+        })(); 
     link(rel="stylesheet", href="/public/stylesheets/style.css")    
 
     meta(name="p:domain_verify" content="2d25b4490c06dc6972edce5f76e1d763")
@@ -19,7 +27,7 @@ html
     meta(name="twitter:description" content="I am a Hertfordshire based engineer with over 10 years experience of solving challenging technical problems. My main focus is full stack web and mobile development. I'm a passionate supporter of truly agile processes and regard Test Driven Development as being the only way to write good software.")
     meta(name="twitter:image" content="http://dombarker.co.uk/public/images/square-collar.jpg")
 
-    script(data-main="public/javascripts/app.js" src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js")
+    script(data-main="public/javascripts/app.js" src="/public/components/requirejs/require.js")
     script.
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
