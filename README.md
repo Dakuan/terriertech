@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Dakuan/dom.barker.svg?branch=master)](https://travis-ci.org/Dakuan/dom.barker)
+
 dom.barker
 ==========
 
