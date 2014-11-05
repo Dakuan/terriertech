@@ -2,3 +2,7 @@ server/public/stylesheets/*
 server/public/javascripts/*
 newrelic_agent.log
 .idea/
+build/*.css
+build/*.js
+node_modules/
+npm-debug.log
