@@ -16,12 +16,12 @@
     "less-middleware": "Dakuan/less.js-middleware.git#rewrite",
     "express-uglify-middleware": "~1.0.2",
     "newrelic": "~1.6.0",
-    "compression": "^1.0.11"
+    "compression": "^1.0.11",
+    "less": "^1.7.5"
   },
   "devDependencies": {
     "gulp": "^3.8.10",
     "gulp-less": "^1.3.6",
-    "gulp-plumber": "^0.6.6",
-    "less": "^1.7.5"
+    "gulp-plumber": "^0.6.6"    
   }
 }
