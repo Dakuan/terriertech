@@ -1,26 +1,48 @@
 .portholes {
-	.make-row();
-	list-style: none;
-	margin-top: 3em;
-	padding: 0;
-	li {
-		.make-sm-column(6);
-		.make-md-column(3);
-		text-align: center;
-		min-height: 120px;
-		opacity: 0;
-		.icon {
-			@size: 150px;
-			border-color: #F8F8F8;
-			border-style: solid;
-			padding-top: 2em;
-			border-radius: @size;
-			height: @size;
-			width: @size;
-			margin-bottom: 3em;
-			box-shadow: 2px 2px 3px rgba(119, 119, 119, 0.2);
-			margin-left: auto;
-			margin-right: auto;
-		}
-	}
+    .make-row();
+    list-style: none;
+    margin-top: 3em;
+    padding: 0;
+    li {
+        .make-sm-column(6);
+        .make-md-column(3);
+        text-align: center;
+        min-height: 120px;
+        opacity: 0;
+        .icon {
+            @size: 150px;
+            border-color: #F8F8F8;
+            border-style: solid;
+            border-radius: @size;
+            height: @size;
+            width: @size;
+            margin-bottom: 3em;
+            box-shadow: 2px 2px 3px rgba(119, 119, 119, 0.2);
+            margin-left: auto;
+            margin-right: auto;
+            a {
+                width: 150px;
+                height: 150px;
+                display: block;
+                line-height: 47px;
+                vertical-align: middle;
+                display: table-cell;
+            }
+        }
+    }
+}
+.clickable {
+    transition: box-shadow 0.5s;    
+    transition: background-color 0.5s;
+    transition: border-color 0.5s;
+    &:hover {
+    	border-color: darken(@brand-primary, 5%);
+	    background-color: @brand-primary;
+    	color: white;
+        box-shadow: 0px 1px 15px rgba(119, 119, 119, 1);
+        a {
+        	transition: color 0.5s;
+        	color: white;
+        }
+    }
 }
