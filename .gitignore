@@ -5,3 +5,4 @@ newrelic_agent.log
 build/*.css
 build/*.js
 node_modules/
+npm-debug.log
