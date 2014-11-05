@@ -21,17 +21,12 @@ module.exports = function () {
 
     // Zip the things
     app.use(compress());
-
-    app.use(lessMiddleware(path.join('', __dirname, '../stylesheets'), {
-        dest: __dirname,
-        preprocess: {
-            path: function (pathname, req) {
-                return pathname.replace('/public/stylesheets', '');
-            }
-        }
-    }));
+    
+    app.use("/public/stylesheets/", express.static(path.join(__dirname , "../build")));
     app.use("/public", express.static(__dirname + "/public"));
     app.use("/public/components", express.static(path.join(__dirname, "../components")));
+    app.use("/public/fonts/", express.static(path.join(__dirname , "../components/fontawesome/fonts")));
+
     app.disable('x-powered-by');
     app.get('/', function (req, res) {
         res.render('index/index', {
