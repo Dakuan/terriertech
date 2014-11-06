@@ -20,9 +20,7 @@
     "less": "^1.7.5",
     "newrelic": "~1.6.0",
     "uglifyjs": "^2.3.6",
-    "underscore": "^1.7.0",
-    "waypoint": "^0.2.8",
-    "waypoints": "0.0.12"
+    "underscore": "^1.7.0"
   },
   "devDependencies": {
     "gulp": "^3.8.10",
