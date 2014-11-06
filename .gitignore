@@ -4,5 +4,4 @@ newrelic_agent.log
 .idea/
 build/*.css
 build/*.js
-node_modules/
 npm-debug.log
