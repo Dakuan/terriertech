@@ -1,23 +1,11 @@
 module.exports = function () {
     var express = require('express'),
-        uglifyMiddleware = require('express-uglify-middleware'),
-        lessMiddleware = require('less-middleware'),
         compress = require('compression'),
         path = require('path'),
         app = express();
 
     app.set('views', __dirname + '/views');
     app.set('view engine', 'jade');
-
-    app.use(uglifyMiddleware({
-        src: path.join('', __dirname, '../client'),
-        dest: path.join('', __dirname, '/public/javascripts'),
-        prefix: "/public/javascripts",
-        compressFilter: /\.js$/,
-        compress: true,
-        force: false,
-    }));
-
 
     // Zip the things
     app.use(compress());
