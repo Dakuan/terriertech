@@ -3,7 +3,6 @@
   "version": "0.0.0",
   "description": "my website",
   "scripts": {
-    "test": "echo \"no tests yet\" && exit 0",
     "build": "STATIC_ROOT=./static NODE_ENV=production browserify client/app.js -o build/app.js && uglifyjs build/app.js -m -o build/app.js && lessc --compress=true ./stylesheets/style.less  > ./build/style.css  && lessc --compress=true  ./stylesheets/noscript.less > ./build/noscript.css",
     "postinstall": "npm run build"
   },
