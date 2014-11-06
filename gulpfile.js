@@ -1,5 +1,6 @@
 var plumber = require('gulp-plumber'),
     less = require('gulp-less'),
+    browserify = require('gulp-browserify'),
     gulp = require('gulp');
 
 // compile less to css
@@ -12,4 +13,16 @@ gulp.task('less', function() {
         .pipe(plumber())
         .pipe(less())
         .pipe(gulp.dest('./build/'));
+});
+
+// compile js
+gulp.task('scripts', function() {
+    // Single entry point to browserify
+    gulp.src('client/app.js')
+        .pipe(plumber())
+        .pipe(browserify({
+            insertGlobals: true,
+            debug: !gulp.env.production
+        }))
+        .pipe(gulp.dest('./build/'))
 });

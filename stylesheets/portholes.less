@@ -11,6 +11,7 @@
         opacity: 0;
         .icon {
             @size: 150px;
+            background-color: white;
             border-color: #F8F8F8;
             border-style: solid;
             border-radius: @size;
@@ -21,10 +22,9 @@
             margin-left: auto;
             margin-right: auto;
             a {
-                width: 150px;
-                height: 150px;
+                width: @size;
+                height: @size;
                 display: block;
-                line-height: 47px;
                 vertical-align: middle;
                 display: table-cell;
             }
@@ -32,17 +32,25 @@
     }
 }
 .clickable {
-    transition: box-shadow 0.5s;    
-    transition: background-color 0.5s;
-    transition: border-color 0.5s;
     &:hover {
-    	border-color: darken(@brand-primary, 5%);
-	    background-color: @brand-primary;
-    	color: white;
+        @animation-time: 0.5s;
+        transition: box-shadow @animation-time;
+        transition: border-color @animation-time;
+        transition: color @animation-time;
+        transition: background-color @animation-time;
+        transition: transform @animation-time;
+        transform: scale(0.95);
+        border-color: darken(@brand-primary, 5%);
+        background-color: @brand-primary;
+        color: white;
         box-shadow: 0px 1px 15px rgba(119, 119, 119, 1);
         a {
-        	transition: color 0.5s;
-        	color: white;
+            i.fa {
+                transition: transform @animation-time;
+                transform: scale(1.1);
+            }
+            transition: color @animation-time;
+            color: white;
         }
     }
 }
