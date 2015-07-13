@@ -3,6 +3,8 @@ var plumber = require('gulp-plumber'),
     browserify = require('gulp-browserify'),
     gulp = require('gulp');
 
+gulp.task('default', ['less', 'scripts']);
+
 // compile less to css
 gulp.task('less', function() {
     gulp.src('stylesheets/style.less')
