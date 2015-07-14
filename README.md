@@ -1,9 +1,7 @@
-[![Build Status](https://travis-ci.org/Dakuan/dom.barker.svg?branch=master)](https://travis-ci.org/Dakuan/dom.barker)
-
-dom.barker
+TerrierTech
 ==========
 
-My personal website, view it at http://www.dombarker.co.uk
+Company website, view it at http://www.terriertech.io
 
 built with
 
@@ -13,4 +11,3 @@ built with
 * [jade](http://jade-lang.com/)
 * [express](http://www.expressjs.com)
 * [heroku](http://www.heroku.com)
-* [travis](https://travis-ci.org)
