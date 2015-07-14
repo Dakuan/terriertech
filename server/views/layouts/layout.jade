@@ -14,6 +14,20 @@ html
     meta(name="twitter:description" content="I am a Hertfordshire based engineer with over 10 years experience of solving challenging technical problems. My main focus is full stack web and mobile development. I'm a passionate supporter of truly agile processes and regard Test Driven Development as being the only way to write good software.")
     meta(name="twitter:image" content="http://terriertech.io/public/images/square-collar.jpg")
 
+    script(type="application/ld+json").
+      {
+        "@context" : "http://schema.org",
+        "@type" : "Organization",
+        "url" : "http://www.terriertech.io",
+        "logo" : "http://terriertech.io/public/images/square-collar.jpg",
+        "contactPoint" :[{
+          "@type" : "ContactPoint",
+          "telephone" : "07825325575",
+          "email" : "info@terriertech.io",
+          "contactType" : "Information"
+        }]
+      }
+
     block head
   body
     .container.container-fluid
