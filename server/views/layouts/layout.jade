@@ -2,6 +2,7 @@ doctype html5
 html
   head
     title TerrierTech [javascript consultancy]
+    meta(name="google-site-verification" content="QqNi0wbVl2Bc5ypJtadcgGQdUgpXnE83TFVsNpkWhxo")
     meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=no")
     meta(name="description", content="javascript consultancy")
     meta(name="keywords", content="javascript,coffeescript,typescript,LESS,SASS,node,node.js,react,ember,angular,backbone,jasmine,mocha,karma,software,sofware engineering,sofware development")
@@ -13,7 +14,11 @@ html
     meta(name="twitter:title" content="TerrierTech [javascript consultancy]")
     meta(name="twitter:description" content="I am a Hertfordshire based engineer with over 10 years experience of solving challenging technical problems. My main focus is full stack web and mobile development. I'm a passionate supporter of truly agile processes and regard Test Driven Development as being the only way to write good software.")
     meta(name="twitter:image" content="http://terriertech.io/public/images/square-collar.jpg")
-
+    #if process.env.NODE_ENV === 'production'
+      style.
+        body {
+          background-color: red;
+        }
     script(type="application/ld+json").
       {
         "@context" : "http://schema.org",

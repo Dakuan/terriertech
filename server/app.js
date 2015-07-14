@@ -9,7 +9,7 @@ module.exports = function () {
 
     // Zip the things
     app.use(compress());
-    
+
     app.use("/public/stylesheets/", express.static(path.join(__dirname , "../build")));
     app.use("/public/js/", express.static(path.join(__dirname , "../build")));
     app.use("/public", express.static(__dirname + "/public"));
