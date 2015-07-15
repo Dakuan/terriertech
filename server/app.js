@@ -2,7 +2,11 @@ module.exports = function () {
     var express = require('express'),
         compress = require('compression'),
         path = require('path'),
+        fs = require('fs'),
+        path = require('path'),
         app = express();
+
+    var styles = fs.readFileSync(path.join(__dirname, '../build/style.css'), {encoding: 'utf8'});
 
     app.set('views', __dirname + '/views');
     app.set('view engine', 'jade');
@@ -19,7 +23,8 @@ module.exports = function () {
     app.disable('x-powered-by');
     app.get('/', function (req, res) {
         res.render('index/index', {
-            host: req.host
+            host: req.host,
+            style: styles
         });
     });
     var port = Number(process.env.PORT || 5000);
