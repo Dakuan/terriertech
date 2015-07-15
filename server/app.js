@@ -6,6 +6,8 @@ module.exports = function () {
         path = require('path'),
         app = express();
 
+    var redisClient = require('redis-url').connect(process.env['REDISTOGO_URL']);
+    var cache = require('express-redis-cache')();
     var styles = fs.readFileSync(path.join(__dirname, '../build/style.css'), {encoding: 'utf8'});
 
     app.set('views', __dirname + '/views');
@@ -21,7 +23,7 @@ module.exports = function () {
     app.use("/fonts/", express.static(path.join(__dirname , "../components/fontawesome/fonts")));
 
     app.disable('x-powered-by');
-    app.get('/', function (req, res) {
+    app.get('/', cache.route(), function (req, res) {
         res.render('index/index', {
             host: req.host,
             style: styles
