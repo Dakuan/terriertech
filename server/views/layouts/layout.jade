@@ -7,7 +7,6 @@ html
     meta(name="description", content="javascript consultancy")
     meta(name="keywords", content="javascript,coffeescript,typescript,LESS,SASS,node,node.js,react,ember,angular,backbone,jasmine,mocha,karma,software,sofware engineering,sofware development")
     link(rel="shortcut icon", href="/public/images/favicon.ico")
-
     meta(name="twitter:card" content="summary")
     meta(name="twitter:creator" content="@TechTerrier")
     meta(name="twitter:title" content="TerrierTech [javascript consultancy]")
@@ -27,18 +26,14 @@ html
         }]
       }
     style= style
-
     block head
   body
     .container.container-fluid
       #content
         block content
-
     script(type="text/javascript" src="public/js/app.js")
-
     noscript
       link(rel="stylesheet", href="/public/stylesheets/noscript.css")
-
     script.
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -46,7 +41,6 @@ html
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
       ga('create', 'UA-49017800-1', 'terriertech.io');
       ga('send', 'pageview');
-
     script.
       WebFontConfig = { fontdeck: { id: '58175' } };
       (function() {
@@ -58,5 +52,6 @@ html
         var s = document.getElementsByTagName('script')[0];
         s.parentNode.insertBefore(wf, s);
       })();
+  link(rel="stylesheet", href="/public/stylesheets/style.css" async="async")
 
 
