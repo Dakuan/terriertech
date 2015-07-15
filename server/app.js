@@ -7,7 +7,7 @@ module.exports = function () {
         app = express();
 
     var redisClient = require('redis-url').connect(process.env['REDISTOGO_URL']);
-    var cache = require('express-redis-cache')();
+    var cache = require('express-redis-cache')(redisClient);
     var styles = fs.readFileSync(path.join(__dirname, '../build/style.css'), {encoding: 'utf8'});
 
     app.set('views', __dirname + '/views');
