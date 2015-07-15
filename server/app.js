@@ -20,6 +20,7 @@ module.exports = function () {
     app.use("/public/js/", express.static(path.join(__dirname , "../build")));
     app.use("/public", express.static(__dirname + "/public"));
     app.use("/public/components", express.static(path.join(__dirname, "../components")));
+    app.use("/public/fonts/", express.static(path.join(__dirname , "../components/fontawesome/fonts")));
     app.use("/fonts/", express.static(path.join(__dirname , "../components/fontawesome/fonts")));
 
     app.disable('x-powered-by');
